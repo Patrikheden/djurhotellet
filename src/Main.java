@@ -6,7 +6,7 @@
 // [ ] 5. Tydlig statusrad när hotellet är tomt
 
 public class Main {
-    static void main(String[] args) {
-
+    public static void main(String[] args) {
+        KattHotell hotell = new KattHotell();
     }
 }
