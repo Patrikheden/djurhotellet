@@ -13,7 +13,6 @@ public class KattHotell {
         return false;
     }
 
-
     public boolean laggTill(Katt katt) {
         if (finns(katt.getChipnummer())) {
             System.out.println("Nekad: chip " + katt.getChipnummer() + " är redan incheckat.");
@@ -25,5 +24,18 @@ public class KattHotell {
 
     public int antalKatter() {
         return katter.size();
+
+    }
+
+    public void listaAlla() {
+        if (katter.isEmpty()) {
+            System.out.println("Hotellet är tomt. Inga katter är incheckade.");
+            return;
+        }
+        for (Katt k : katter) {
+            System.out.println(k.getNamn() + " (" + k.getRas() + ") - Chip: " + k.getChipnummer());
+        }
+
     }
 }
+
