@@ -37,5 +37,13 @@ public class KattHotell {
         }
 
     }
+    public Katt hittaNamn(String namn) {
+        for (Katt k : katter) {
+            if (k.getNamn().equalsIgnoreCase(namn)) {
+                return k;
+            }
+        }
+        return null;
+    }
 }
 
