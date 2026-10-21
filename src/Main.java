@@ -8,5 +8,13 @@
 public class Main {
     public static void main(String[] args) {
         KattHotell hotell = new KattHotell();
+        hotell.laggTill(new Katt("Bosse", 101, "Siames"));
+        hotell.laggTill(new Katt("Luna", 102, "Ragdoll"));
+        if (!hotell.laggTill(new Katt("Kopia", 101, "Perser"))) {
+            System.out.println("Dubblett nekad");
+        }
+        System.out.println("Antal: " + hotell.antalKatter());
+
     }
+
 }
